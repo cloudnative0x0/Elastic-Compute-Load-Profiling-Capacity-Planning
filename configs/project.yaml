@@ -1,0 +1,31 @@
+project:
+  name: example-project
+  description: "Example web/API workload / Пример нагрузки web/API"
+
+project_metrics:
+  # Business demand / Бизнес-нагрузка
+  mau: 1000
+  dau_percent: 5
+  business_events_per_user_day: 20
+  rpc_per_event: 3
+
+  # Traffic profile / Профиль трафика
+  active_hours_day: 8
+  peak_factor: 4
+
+  # Benchmark results / Результаты нагрузочного теста
+  cpu_ms_per_rpc: 5
+  latency_ms: 100
+  memory_mib_per_inflight: 1
+  base_ram_gib: 1
+
+  # Capacity and cost policy / Политика мощности и стоимости
+  target_cpu_percent: 65
+  growth_percent: 30
+  billing_hours_month: 720
+  availability_sla_percent: 99.9
+
+  # Optional manual topology override. Keep null to derive it from SLA.
+  # Необязательная ручная топология. Оставьте null для расчёта из SLA.
+  min_instances: null
+  reserve_instances: null
